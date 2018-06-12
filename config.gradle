@@ -1,0 +1,37 @@
+ext{
+    android=[
+            compileSdkVersion :27,
+            minSdkVersion :15,
+            targetSdkVersion :27,
+            versionCode :1,
+            versionName: "1.0",
+    ]
+    version =[
+            supportLibraryVersion  : "27.1.1",
+            daggerVersion           : "2.15",
+            butterknifeVersion      : "8.8.1",
+            leakcanaryVersion       : "1.5.4"
+    ]
+
+    dependencies = [
+      //base
+            "appcompat-v7"              :"com.android.support:appcompat-v7:${version["supportLibraryVersion"]}",
+            "constraint-layout"        :"com.android.support.constraint:constraint-layout:1.1.1",
+    //unit
+          "junit"                         :"junit:junit:4.12",
+          "runner"                       :"com.android.support.test:runner:1.0.2",
+          "espresso"                     :"com.android.support.test.espresso:espresso-core:3.0.1",
+   //dagger
+      "dagger"                            : "com.google.dagger:dagger:${version["daggerVersion"]}",
+      "dagger-compiler"                   : "com.google.dagger:dagger-compiler:${version["daggerVersion"]}",
+      "dagger-android"                    : "com.google.dagger:dagger-android:${version["daggerVersion"]}",
+      "dagger-android-support"            : "com.google.dagger:dagger-android-support:${version["daggerVersion"]}",
+      "dagger-android-processor"          : "com.google.dagger:dagger-android-processor:${version["daggerVersion"]}",
+      "butterknife"                       : "com.jakewharton:butterknife:${version["butterknifeVersion"]}",
+      "butterknife-compiler"              : "com.jakewharton:butterknife-compiler:${version["butterknifeVersion"]}",
+      //内存泄漏
+      "leakcanary-android"                 : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
+      "leakcanary-android-no-op"           :"com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
+    ]
+
+}
